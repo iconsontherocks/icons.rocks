@@ -11,7 +11,7 @@ const List = styled(Container)`
   grid-column-gap: 44px;
   grid-row-gap: 60px;
   justify-items: center;
-  margin: 40px 0;
+  margin: 60px 0 220px;
 `;
 
 interface Props {

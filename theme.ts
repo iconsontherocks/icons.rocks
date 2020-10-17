@@ -7,6 +7,8 @@ export const Theme = {
     primary: '#3424EC',
     background: '#F0F0FA',
     backgroundDarken2: 'rgba(49, 123, 210, 0.08)',
+    primaryDarken: '#202130',
+    primaryLighten: '#8194C7',
     headerGradient: 'linear-gradient(180deg, #B8BECF -62.37%, rgba(156, 166, 192, 0) 100%)',
   },
 };

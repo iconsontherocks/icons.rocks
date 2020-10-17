@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Header } from '../components';
+import { Footer, Header } from '../components';
 import { Home } from '../modules';
 
 export default function Page() {
@@ -8,6 +8,7 @@ export default function Page() {
     <>
       <Header title="Icons for everyone." subtitle="Beautiful & Open Source" />
       <Home />
+      <Footer />
     </>
   );
 }

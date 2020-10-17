@@ -6,4 +6,6 @@ export interface CardProps {
     fold?: boolean
     children?: ElementType | ReactElement[] | string
     className?: string
+    tag?: 'div' | 'button' | 'input'
+    foldSize?: string
 }
