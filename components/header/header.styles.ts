@@ -9,6 +9,7 @@ export const HeaderWrapper = styled.div`
     align-items: center;
     justify-content: center;
     padding: 130px 0 70px;
+    text-align: center;
 `;
 
 export const HeaderTitle = styled.h1`

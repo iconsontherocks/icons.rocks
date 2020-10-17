@@ -1,4 +1,5 @@
 import React from 'react';
+import { Container } from '../layout';
 import * as S from './header.styles';
 
 interface Props {
@@ -11,8 +12,10 @@ interface Props {
 
 export const Header = ({ title, subtitle, components }: Props) => (
   <S.HeaderWrapper>
-    { components.subtitle || <S.HeaderSubTitle>{ subtitle }</S.HeaderSubTitle>}
-    <S.HeaderTitle>{title}</S.HeaderTitle>
+    <Container>
+      { components.subtitle || <S.HeaderSubTitle>{ subtitle }</S.HeaderSubTitle>}
+      <S.HeaderTitle>{title}</S.HeaderTitle>
+    </Container>
   </S.HeaderWrapper>
 );
 
