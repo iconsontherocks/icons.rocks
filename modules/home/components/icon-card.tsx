@@ -57,10 +57,10 @@ export const IconCard = (prop: IconFamily) => (
   <IconCardWrapper>
     <StyledCard>
       {
-      prop.icons.map((Component: ElementType, i) => (
+        prop.icons.map((Component: ElementType, i) => (
         <Component key={`${prop.name}-icon-${i}`} /> //eslint-disable-line
-      ))
-    }
+        ))
+      }
     </StyledCard>
     <IconDetails>
       <Name>{prop.name}</Name>

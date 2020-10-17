@@ -43,6 +43,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'no-use-before-define': 'off',
     'react/jsx-props-no-spreading': 'off',
+    indent: ['error', 2],
     'import/extensions': [
       'error',
       'ignorePackages',
