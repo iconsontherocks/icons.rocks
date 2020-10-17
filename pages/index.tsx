@@ -1,6 +1,13 @@
 import React from 'react';
-import { Header } from '../components';
 
-export default function Home() {
-  return <Header />;
+import { Header } from '../components';
+import { Home } from '../modules';
+
+export default function Page() {
+  return (
+    <>
+      <Header title="Icons for everyone." subtitle="Beautiful & Open Source" />
+      <Home />
+    </>
+  );
 }

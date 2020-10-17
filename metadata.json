@@ -1,0 +1,43 @@
+{
+    "icons": [{
+        "name": "Feather",
+        "author": "colebemis",
+        "version": "4.28.0",
+        "license": "MIT License",
+        "stars": "19k",
+        "site": "https://feathericons.com/",
+        "path": "feather",
+        "repository": "https://github.com/feathericons/feather",
+        "repositoryPath": "icons"
+    }, {
+      "name": "Radix Icons",
+      "author": "modulz",
+      "version": "3.1.0",
+      "license": "MIT License",
+      "stars": "306",
+      "site": "https://icons.modulz.app/",
+      "path": "radix",
+      "repository": "https://github.com/modulz/radix-icons",
+      "repositoryPath": "packages/radix-icons/icons/15"
+    }, {
+      "name": "Hero Icons",
+      "author": "steveschoger",
+      "version": "0.4.2",
+      "license": "MIT License",
+      "stars": "10.1k",
+      "site": "https://heroicons.com",
+      "path": "hero-icons",
+      "repository": "https://github.com/tailwindlabs/heroicons",
+      "repositoryPath": "src/outline"
+    }, {
+      "name": "Ionicons",
+      "author": "Ionic",
+      "version": "5.2.3",
+      "license": "MIT License",
+      "stars": "14.8k",
+      "site": "https://ionicons.com/",
+      "path": "ionicons",
+      "repository": "https://github.com/ionic-team/ionicons",
+      "repositoryPath": "src/svg"
+    }]
+}
