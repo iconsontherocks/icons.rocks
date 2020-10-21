@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React from 'react';
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
+import { Sidebar, SidebarProvider } from '../sidebar';
 import { loadColorFromTheme } from '../utils';
 
 const Global = createGlobalStyle`
@@ -15,6 +16,18 @@ body {
 }
 `;
 
+const PageContainer = styled.div`
+  display: flex;
+  
+`;
+
+const Page = styled.div`
+  height: 100vH;
+  overflow-y: auto;
+  padding: 44px;
+  flex: 1;
+`;
+
 export const Layout = ({ children }: { children: React.ReactElement }) => (
   <>
     <Head>
@@ -22,6 +35,14 @@ export const Layout = ({ children }: { children: React.ReactElement }) => (
     </Head>
 
     <Global />
-    { children }
+
+    <SidebarProvider>
+      <PageContainer>
+        <Sidebar />
+        <Page>
+          { children }
+        </Page>
+      </PageContainer>
+    </SidebarProvider>
   </>
 );

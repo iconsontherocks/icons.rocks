@@ -2,16 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 import { IconCard } from './icon-card';
 
-import { Container } from '../../../components';
 import { IconFamily } from '../home.types';
 
-const List = styled(Container)`
+const List = styled.div`
   display: grid;
   grid-template-columns: repeat(3, calc(33.3% - (88px / 3) ));
   grid-column-gap: 44px;
-  grid-row-gap: 60px;
+  grid-row-gap: 16px;
   justify-items: center;
-  margin: 60px 0 220px;
 `;
 
 interface Props {

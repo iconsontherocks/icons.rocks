@@ -31,7 +31,7 @@ export const getIcons = (): Array<IconFamily> => {
   return icons.map((it) => ({
     ...it,
     totalIcons: grouppedIcons[it.path].length,
-    icons: shuffle(grouppedIcons[it.path]).slice(0, 9)
+    icons: shuffle(grouppedIcons[it.path]).slice(0, 12)
       .map((path) => require(`../../assets/${path}`).default), //eslint-disable-line
   }));
 };

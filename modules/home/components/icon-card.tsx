@@ -8,19 +8,20 @@ import { IconFamily } from '../home.types';
 
 const IconCardWrapper = styled.div`
   cursor: pointer;
+  width: 100%;
 `;
 
-const StyledCard = styled(Card)`
-  padding: 60px;
+const StyledCard = styled.div`
+  padding: 50px;
   display: grid;
-  grid-template-columns: repeat(3, calc(33.3% - ((66px  * 2) / 3) ));
-  grid-column-gap: 66px;
+  grid-template-columns: repeat(4, calc(25% - ((40px  * 3) / 4) ));
+  grid-column-gap: 40px;
   grid-row-gap: 66px;
   justify-items: center;
-
-  height: 320px;
-  max-width: 320px;
-
+  background: #FFFFFF;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  width: 100%;
   svg {
     width: 24px; 
     height: 24px;
@@ -29,28 +30,28 @@ const StyledCard = styled(Card)`
 
 const IconDetails = styled.div`
   display: flex;
-  margin: 20px 0 0;
+  margin: 16px 0;
   align-items: center;
+  justify-content: center;
+  span {
+    font-size: 22px;
+  }
 `;
 
 const Name = styled.p`
+  display: inline-flex;
   font-family: Neue Haas Unica W1G, sans-serif;
   font-weight: bold;
   font-size: 20px;
-  color: ${loadColorFromTheme('title')};
+  color: ${loadColorFromTheme('primary')};
+  margin-right: 10px;
 `;
 
-const TotalOfIcons = styled.p`
-  display: flex;
-  align-items: center;
-  color: ${loadColorFromTheme('title')};
-  font-family: Neue Haas Unica W1G, sans-serif;
-  font-size: 16px;
-  margin-left: auto;
+const NumberIcons = styled.p`
+margin-left: 10px;
+font-size: 14px;
 
-  svg {
-    margin: 0 10px;
-  }
+color: ${loadColorFromTheme('title')};
 `;
 
 export const IconCard = (prop: IconFamily) => (
@@ -64,10 +65,13 @@ export const IconCard = (prop: IconFamily) => (
     </StyledCard>
     <IconDetails>
       <Name>{prop.name}</Name>
-      <TotalOfIcons>
-        <Gallery />
+      <span>·</span>
+      <NumberIcons>
         { prop.totalIcons }
-      </TotalOfIcons>
+        {' '}
+        Icons
+      </NumberIcons>
+
     </IconDetails>
   </IconCardWrapper>
 );
