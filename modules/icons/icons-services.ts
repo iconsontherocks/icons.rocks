@@ -1,5 +1,5 @@
 import { icons } from '../../metadata.json';
-import { IconFamily } from './home.types';
+import { IconFamily } from './icons.types';
 
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i -= 1) {
@@ -31,7 +31,28 @@ export const getIcons = (): Array<IconFamily> => {
   return icons.map((it) => ({
     ...it,
     totalIcons: grouppedIcons[it.path].length,
-    icons: shuffle(grouppedIcons[it.path]).slice(0, 12)
-      .map((path) => require(`../../assets/${path}`).default), //eslint-disable-line
+    icons: loadIconsFromAssets(shuffle(grouppedIcons[it.path]).slice(0, 12)),
   }));
 };
+
+export const getIconsPathFromFamily = (path: string): IconFamily => {
+  // @ts-ignore
+  const allIcons = require.context('../../assets/').keys().filter((it) => {
+    const [, folderName] = it.split('/');
+
+    return folderName === path;
+  }).map((it) => it.substring(2));
+
+  const family = icons.find((it) => it.path === path);
+
+  return {
+    ...family,
+    path: family.path,
+    totalIcons: allIcons.length,
+    icons: shuffle(allIcons),
+  };
+};
+
+export const loadIconsFromAssets = (iconsPath: Array<string>) => iconsPath.map(
+  (path) => require(`../../assets/${path}`).default  //eslint-disable-line
+);

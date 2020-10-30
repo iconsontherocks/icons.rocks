@@ -7,6 +7,7 @@ export interface IconFamily {
   license: string
   stars: string
   site: string
+  path: string
   icons: Array<ElementType>
   totalIcons: number
 }

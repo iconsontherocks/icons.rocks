@@ -35,7 +35,6 @@ export const Layout = ({ children }: { children: React.ReactElement }) => (
     </Head>
 
     <Global />
-
     <SidebarProvider>
       <PageContainer>
         <Sidebar />
@@ -44,5 +43,6 @@ export const Layout = ({ children }: { children: React.ReactElement }) => (
         </Page>
       </PageContainer>
     </SidebarProvider>
+
   </>
 );

@@ -1,10 +1,9 @@
+import Link from 'next/link';
 import React, { ElementType } from 'react';
 import styled from 'styled-components';
 
-import { Card } from '../../../components';
-import { Gallery } from '../../../components/icons';
 import { loadColorFromTheme } from '../../../components/utils';
-import { IconFamily } from '../home.types';
+import { IconFamily } from '../../icons';
 
 const IconCardWrapper = styled.div`
   cursor: pointer;
@@ -55,23 +54,25 @@ color: ${loadColorFromTheme('title')};
 `;
 
 export const IconCard = (prop: IconFamily) => (
-  <IconCardWrapper>
-    <StyledCard>
-      {
-        prop.icons.map((Component: ElementType, i) => (
+  <Link href={`/family/${prop.path}`}>
+    <IconCardWrapper>
+      <StyledCard>
+        {
+          prop.icons.map((Component: ElementType, i) => (
         <Component key={`${prop.name}-icon-${i}`} /> //eslint-disable-line
-        ))
-      }
-    </StyledCard>
-    <IconDetails>
-      <Name>{prop.name}</Name>
-      <span>·</span>
-      <NumberIcons>
-        { prop.totalIcons }
-        {' '}
-        Icons
-      </NumberIcons>
+          ))
+        }
+      </StyledCard>
+      <IconDetails>
+        <Name>{prop.name}</Name>
+        <span>·</span>
+        <NumberIcons>
+          { prop.totalIcons }
+          {' '}
+          Icons
+        </NumberIcons>
 
-    </IconDetails>
-  </IconCardWrapper>
+      </IconDetails>
+    </IconCardWrapper>
+  </Link>
 );

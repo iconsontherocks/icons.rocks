@@ -5,13 +5,19 @@ import { Logo } from '../icons';
 
 import * as S from './sidebar.styles';
 
-export const SidebarContext = createContext({
+export type SidebarContextValues = {
+  children: ReactElement | Array<ReactElement>,
+  setValue: (children: ReactElement | Array<ReactElement>) => void
+}
+
+export const SidebarContext = createContext<SidebarContextValues>({
   children: null,
   setValue: () => {},
 });
 
 export const Sidebar = () => {
   const { children } = useContext(SidebarContext);
+
   return (
     <S.Wrapper>
       <S.Header>
