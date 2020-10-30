@@ -8,7 +8,7 @@ type Props = {
   family: IconFamily
 }
 export const Family = ({ family }: Props) => {
-  const [icons, setIcons] = useState((loadIconsFromAssets(family.icons as string[])));
+  const [icons, setIcons] = useState([]);
 
   useEffect(() => {
     setIcons((loadIconsFromAssets(family.icons as string[])));
