@@ -8,6 +8,6 @@ export interface IconFamily {
   stars: string
   site: string
   path: string
-  icons: Array<ElementType>
+  icons: Array<ElementType> | Array<string>
   totalIcons: number
 }
